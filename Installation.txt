@@ -1,0 +1,49 @@
+npm install -g npm-check-updates
+
+npm remove
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+npm run build
+npm install -g serve
+serve -s build
+
+npm test
+npm run eject(
+Removes this tool and copies build dependencies, configuration files
+and scripts into the app directory. If you do this, you can’t go back!)
+
+npm install @reduxjs/toolkit react-redux
+npm i redux
+
+npm install --save-dev @babel/preset-react
+.babelrc file
+{
+  "presets": ["@babel/preset-react"]
+}
+
+var babel = require("@babel/core");
+import { transform } from "@babel/core";
+import * as babel from "@babel/core";
+
+npm i -g webpack
+npm i -D uglifyjs-webpack-plugin
+webpack
+
+npm install bootstrap
+# OR
+yarn add bootstrap
+
+index.js
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+// Bootstrap Bundle JS
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
+npm install jquery
+npm install jsdom
+
+npm i marked
+npm i prismjs
