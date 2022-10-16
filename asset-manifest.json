@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Mostafa-Ali-A/Markdown-Previewer.git/static/css/main.7cb57e5e.css",
+    "main.js": "/Mostafa-Ali-A/Markdown-Previewer.git/static/js/main.ec75c665.js",
+    "static/js/988.fcdd9f96.chunk.js": "/Mostafa-Ali-A/Markdown-Previewer.git/static/js/988.fcdd9f96.chunk.js",
+    "index.html": "/Mostafa-Ali-A/Markdown-Previewer.git/index.html",
+    "main.7cb57e5e.css.map": "/Mostafa-Ali-A/Markdown-Previewer.git/static/css/main.7cb57e5e.css.map",
+    "main.ec75c665.js.map": "/Mostafa-Ali-A/Markdown-Previewer.git/static/js/main.ec75c665.js.map",
+    "988.fcdd9f96.chunk.js.map": "/Mostafa-Ali-A/Markdown-Previewer.git/static/js/988.fcdd9f96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cb57e5e.css",
+    "static/js/main.ec75c665.js"
+  ]
+}
