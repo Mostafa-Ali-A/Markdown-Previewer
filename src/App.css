@@ -107,16 +107,6 @@ textarea {
   margin-right: 10px;
 }
 
-.fa-arrows-alt:hover {
-  color: #5dc5c5;
-  cursor: pointer;
-}
-
-.fa-compress:hover {
-  color: #5dc5c5;
-  cursor: pointer;
-}
-
 .clearBtn:hover {
   color: #4aa3a3;
   background-color: #5dc5c5;
@@ -229,43 +219,3 @@ a:-webkit-any-link {
   max-width: 90%;
   margin: 2rem auto;
 }
-
-/*.col-lg-12-ed {
-  position: relative;
-	left: 50%;
-  transform: translate(-50%);
-	border-radius: .7%;
-
-	padding-left: 7px;
-	text-align: left;
-  font-size:90%;
-  height: 200px;
-  max-width: 600px;
-  margin: 1.125rem auto;
-}
-
-.col-lg-12-pr {
-  position: relative;
-	left: 50%;
-  transform: translate(-50%);
-	border-radius: .7%;
-	width: 550px;
-	padding: 40px 40px 80px 40px;
-	text-align: center;
-}
-
-.col-md-12-ed {
-  width: 100px;
-}
-
-.col-md-12-pr {
-  width: 100px;
-}
-
-.col-sm-12-ed {
-  width: 500px;
-}
-
-.col-sm-12-pr {
-  width: 500px;
-}*/

@@ -1,27 +1,8 @@
 import "./App.css";
-import React/*, { useState, useEffect }*/ from "react";
-/*import ReactDOM from "react-dom/client";*/
+import React from "react";
 import { marked } from "marked";
 import Prism from "prismjs";
-/*import { render } from "@testing-library/react";*/
 
-/*import { useSelector, useDispatch } from "react-redux";*/
-
-
-// Allows line breaks with return button
-/*marked.setOptions({
-  breaks: true,
-  gfm: true,
-  highlight: function (code) {
-    return Prism.highlight(code, Prism.languages.javascript, "javascript");
-  }
-  }
-);*/
-// Set a function to be used by the marked Renderer, the bit that takes markdown and translates it to html.
-/*const renderer = new marked.Renderer();
-renderer.link = function (href, title, text) {
-  return <div target="_blank" href="$href">${text}</div>;
-}*/
 function App() {
   const ed="col-sm-12-ed col-md-12-ed col-lg-12-ed";
   const pr="col-sm-12-pr col-md-12-pr col-lg-12-pr";
@@ -31,10 +12,6 @@ function App() {
   };
 
   const [text, setText] = React.useState (Previewer);
-
-  /*React.useEffect(() => {
-		setText(Previewer);
-	}, []);*/
 
   return (
     <div className="container">
@@ -46,10 +23,6 @@ function App() {
           </h1>
           <button className="clearBtn" onClick={clearTextarea}>Clear
           </button>
-          <i class="fa fa-arrows-alt" aria-hidden="true">
-          <i class="fa fa-compress" aria-hidden="true">
-          </i>
-          </i>
         </div>
         <textarea id="editor" className={ed} name="text" value={text} onChange={(e) => setText(e.target.value) } placeholder="Enter Your Markdown" />
       </div>
@@ -59,10 +32,6 @@ function App() {
             </i>
             <h1 className="h">Previewer
             </h1>
-            <i class="fa fa-arrows-alt" aria-hidden="true">
-            <i class="fa fa-compress" aria-hidden="true">
-            </i>
-            </i>
           </div>
         <Preview markdown={text} />
       </div>
@@ -78,7 +47,7 @@ function App() {
         highlight: function (code) {
           return Prism.highlight(code, Prism.languages.javascript, "javascript");
         }
-        }/*,  { renderer: renderer }*/)}}
+        })}}
       ></div>
     );
     }
