@@ -1,38 +1,54 @@
-import "./App.css";
-import React from "react";
-import { marked } from "marked";
-import Prism from "prismjs";
+import './App.css';
+import React, {useState} from 'react';
+import { marked } from 'marked';
+import Prism from 'prismjs';
 
 function App() {
-  const ed="col-sm-12-ed col-md-12-ed col-lg-12-ed";
-  const pr="col-sm-12-pr col-md-12-pr col-lg-12-pr";
 
   const clearTextarea = () => {
-    setText("");
+    setText('');
   };
 
-  const [text, setText] = React.useState (Previewer);
+  const [text, setText] = useState (Previewer);
 
+  const [editorMaximized, setEditorMaximized] = useState (false);
+  const [previewMaximized, setPreviewMaximized] = useState (false);
+
+  const wrap = editorMaximized
+      ? ['editorWrap maximized', 'previewWrap hide', 'fa fa-compress']
+      : previewMaximized
+      ? ['editorWrap hide', 'previewWrap maximized', 'fa fa-compress']
+      : ['editorWrap', 'previewWrap', 'fa fa-arrows-alt'];
+
+      function handleEditorMaximized() {
+        if (!previewMaximized) setEditorMaximized(!editorMaximized);
+        else setPreviewMaximized(false);
+    }
+    function handlePreviewMaximized() {
+        if (!editorMaximized) setPreviewMaximized(!previewMaximized);
+        else setEditorMaximized(false);
+    }
+    
   return (
-    <div className="container">
-      <div className="editorWrap">
-        <div className="toolbar">
-          <i class="fa fa-free-code-camp" aria-hidden="true">
-          </i>
-          <h1 className="h">Editor
+    <div className='container'>
+      <div className={wrap[0]} id='editorWrap'>
+        <div className='toolbar'>
+          <i className='fa fa-free-code-camp' aria-hidden='true'/>
+          <h1 className='h' >Editor
           </h1>
-          <button className="clearBtn" onClick={clearTextarea}>Clear
+          <button className='clearBtn' onClick={clearTextarea}>Clear
           </button>
+          <i onClick={handleEditorMaximized} className={wrap[2]}/>
         </div>
-        <textarea id="editor" className={ed} name="text" value={text} onChange={(e) => setText(e.target.value) } placeholder="Enter Your Markdown" />
+        <textarea id='editor' name='text' value={text} onChange={(e) => setText(e.target.value) } placeholder='Enter Your Markdown' />
       </div>
-        <div className="previewWrap">
-          <div className="toolbar">
-          <i class="fa fa-free-code-camp" aria-hidden="true">
-            </i>
-            <h1 className="h">Previewer
-            </h1>
-          </div>
+      <div className={wrap[1]} id='previewWrap'>
+        <div className='toolbar'>
+          <i className='fa fa-free-code-camp' aria-hidden='true'/>
+          <h1 className='h'>Previewer
+          </h1>
+          <i onClick={handlePreviewMaximized} className={wrap[2]}/>
+        </div>
         <Preview markdown={text} />
       </div>
     </div>
@@ -40,15 +56,15 @@ function App() {
 
     function Preview({markdown}){
     return(
-      <div id="preview" className={pr}
+      <div id='preview'
       dangerouslySetInnerHTML={{__html: marked(text, {
         breaks: true,
         gfm: true,
         highlight: function (code) {
-          return Prism.highlight(code, Prism.languages.javascript, "javascript");
+          return Prism.highlight(code, Prism.languages.javascript, 'javascript');
         }
         })}}
-      ></div>
+      />
     );
     }
   }

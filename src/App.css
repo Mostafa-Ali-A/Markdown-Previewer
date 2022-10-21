@@ -13,7 +13,7 @@ body {
   margin: 10px 0;
 }
 
-.editorWrap textarea {
+#editorWrap textarea {
   width: 99%;
   min-height: 200px;
   margin-bottom: -5px;
@@ -47,12 +47,12 @@ textarea {
   padding: 2px;
 }
 
-.editorWrap {
+#editorWrap {
   max-width: 600px;
   margin: 1.125rem auto;
 }
 
-.previewWrap {
+#previewWrap {
   background-color: #c0d8d8;
   border: 1px solid #1d2f2f;
   box-shadow: 1px 1px 10px 2px #3a5f5f;
@@ -63,7 +63,7 @@ textarea {
   overflow-wrap: break-word;
 }
 
-.editorWrap .toolbar {
+#editorWrap .toolbar {
   width: 99%;
 }
 
@@ -101,16 +101,41 @@ textarea {
 .clearBtn {
   background-color: #4aa3a3;
   color: #d5fafa;
-  border-color: #d5fafa ;
+  border-color: #000000 ;
   border-radius: 10%;
-  border-width: 1px;
+  border-width: 2px;
   margin-right: 10px;
 }
 
 .clearBtn:hover {
   color: #4aa3a3;
   background-color: #5dc5c5;
+  border-color: #4b4b4d ;
   cursor: pointer;
+}
+
+.maximized {
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+}
+.maximized textarea {
+  min-height: 95vh;
+  resize: none;
+}
+
+.fa-arrows-alt:hover {
+  color: #5dc5c5;
+  cursor: pointer;
+}
+
+.fa-compress:hover {
+  color: #5dc5c5;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
 
 h1 {
