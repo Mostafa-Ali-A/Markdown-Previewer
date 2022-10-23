@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Segoe UI";
+  font-family: 'Segoe UI';
   font-size: 1rem;
   font-weight: 400;
   background: #87b5b5;
@@ -128,7 +128,6 @@ h3 {
 }
 
 code {
-  font-family: monospace;
   color: black;
   background: white;
   font-size: 14px;
@@ -138,7 +137,6 @@ code {
 pre {
   background: white;
   padding: 5px;
-  font-family: monospace;
 }
 
 .comment {
