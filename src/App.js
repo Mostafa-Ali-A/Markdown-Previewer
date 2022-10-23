@@ -22,11 +22,9 @@ function App() {
 
       function handleEditorMaximized() {
         if (!previewMaximized) setEditorMaximized(!editorMaximized);
-        else setPreviewMaximized(false);
     }
     function handlePreviewMaximized() {
         if (!editorMaximized) setPreviewMaximized(!previewMaximized);
-        else setEditorMaximized(false);
     }
     
   return (
@@ -34,8 +32,8 @@ function App() {
       <div className={wrap[0]} id='editorWrap'>
         <div className='toolbar'>
           <i className='fa fa-free-code-camp' aria-hidden='true'/>
-          <h1 className='h' >Editor
-          </h1>
+          <span className='head' >Editor
+          </span>
           <button className='clearBtn' onClick={clearTextarea}>Clear
           </button>
           <i onClick={handleEditorMaximized} className={wrap[2]}/>
@@ -45,8 +43,8 @@ function App() {
       <div className={wrap[1]} id='previewWrap'>
         <div className='toolbar'>
           <i className='fa fa-free-code-camp' aria-hidden='true'/>
-          <h1 className='h'>Previewer
-          </h1>
+          <span className='head'>Previewer
+          </span>
           <i onClick={handlePreviewMaximized} className={wrap[2]}/>
         </div>
         <Preview markdown={text} />
