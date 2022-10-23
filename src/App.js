@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState} from 'react';
 import { marked } from 'marked';
 import Prism from 'prismjs';
-
+/*JS Here*/
 function App() {
 
   const clearTextarea = () => {
@@ -26,7 +26,7 @@ function App() {
     function handlePreviewMaximized() {
         if (!editorMaximized) setPreviewMaximized(!previewMaximized);
     }
-    
+    /*HTML Here*/
   return (
     <div className='container'>
       <div className={wrap[0]} id='editorWrap'>

@@ -8,7 +8,7 @@ body {
   font-weight: 400;
   background: #87b5b5;
 }
-
+/* Main Contents */
 textarea {
   font-family: monospace;
   line-height: normal;
@@ -101,10 +101,52 @@ i {
   cursor: pointer;
 }
 
+.maximized textarea {
+  min-height: 95vh;
+}
+
 .hide {
   display: none;
 }
 
+@media screen and (max-width: 850px) {
+  #previewWrap {
+    max-width: 630px;
+  }
+  #editorWrap {
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #previewWrap {
+    width: 100vh;
+  }
+  #editorWrap {
+    width: 100vh;
+  }
+  }
+
+
+
+@media screen and (max-width: 650px) {
+  body {
+    margin: 5px 0;
+  }
+  #editorWrap {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .maximized {
+    width: 95%;
+    margin: auto;
+  }
+  #previewWrap {
+    width: 90vw;
+  }
+}
+
+/*MarkDown Contents*/
 h1 {
   border-bottom: 2px solid #224b4b;
   font-size: 32px;
