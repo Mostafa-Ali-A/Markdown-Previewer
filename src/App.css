@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI';
-  font-size: 1rem;
-  font-weight: 400;
   background: #87b5b5;
 }
 /* Main Contents */
@@ -54,7 +53,7 @@ textarea {
   padding-right: auto;
   border: 1px solid #1d2f2f;
   box-shadow: 1px 1px 10px 2px #3a5f5f;
-  font-family: Russo One;
+  font-family: 'Russo One', sans-serif;
 }
 
 i {
@@ -68,24 +67,22 @@ i {
 
 .head {
   margin-right: auto;
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 15px;
   margin-top: 3px;
   margin-bottom: 3px;
 }
 
 .clearBtn {
   background-color: #4aa3a3;
-  color: #d5fafa;
   box-shadow: 1px 1px 10px 2px #3a5f5f;
   border-color:  solid #1d2f2f ;
   border-radius: 10%;
   border-width: 2px;
   margin-right: 10px;
+  font-size: 15px;
 }
 
 .clearBtn:hover {
-  color: #4aa3a3;
   background-color: #5dc5c5;
   border-color: #4b4b4d ;
   cursor: pointer;
@@ -107,43 +104,6 @@ i {
 
 .hide {
   display: none;
-}
-
-@media screen and (max-width: 850px) {
-  #previewWrap {
-    max-width: 630px;
-  }
-  #editorWrap {
-    max-width: 550px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #previewWrap {
-    width: 100vh;
-  }
-  #editorWrap {
-    width: 100vh;
-  }
-  }
-
-
-
-@media screen and (max-width: 650px) {
-  body {
-    margin: 5px 0;
-  }
-  #editorWrap {
-    width: 80vw;
-    margin: 0 auto;
-  }
-  .maximized {
-    width: 95%;
-    margin: auto;
-  }
-  #previewWrap {
-    width: 90vw;
-  }
 }
 
 /*MarkDown Contents*/
