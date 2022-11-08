@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import React, {useState} from 'react';
 import { marked } from 'marked';
 import Prism from 'prismjs';
