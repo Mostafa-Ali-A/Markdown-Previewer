@@ -17,8 +17,7 @@
   </h1>
   <ul>
   <p>
-   A Complete Web App When you enter a GitHub Flavored Markdown Language into the Editor, the Text is Rendered as HTML in the Previewer as you Type to.
-</p>
+   A Complete Web App When you enter a GitHub Flavored Markdown Language into the Editor, the Text is Rendered as HTML in the Previewer as you Type/p>
     </ul>
   <h1>
 🔝 Technologies
