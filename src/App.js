@@ -4,8 +4,8 @@ import Editor from './Components/Editor';
 
 export default function App() {
 	return (
-		<div className='container'>
+		<main className='container'>
 			<Editor />
-		</div>
+		</main>
 	);
 }

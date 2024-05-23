@@ -27,10 +27,10 @@ export default function Preview({ text }) {
 	);
 
 	return (
-		<div
+		<article
 			id='preview'
 			dangerouslySetInnerHTML={{
 				__html: marked.parse(text),
-			}}></div>
+			}}></article>
 	);
 }

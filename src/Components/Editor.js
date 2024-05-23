@@ -69,13 +69,14 @@ export default function Editor() {
 
 	return (
 		<>
-			<div
+			<section
 				className={wrap[0]}
 				id='editorWrap'>
 				<div className='toolbar'>
 					<FontAwesomeIcon icon={faFreeCodeCamp} />
-					<span className='head'>Editor</span>
+					<h6 className='head'>Editor</h6>
 					<button
+						title='Clear'
 						className='clearBtn'
 						onClick={clearTextarea}>
 						Clear
@@ -89,17 +90,17 @@ export default function Editor() {
 					onChange={(e) => setText(e.target.value)}
 					placeholder='Enter Your Markdown'
 				/>
-			</div>
-			<div
+			</section>
+			<section
 				className={wrap[1]}
 				id='previewWrap'>
 				<div className='toolbar'>
 					<FontAwesomeIcon icon={faFreeCodeCamp} />
-					<span className='head'>Previewer</span>
+					<h6 className='head'>Previewer</h6>
 					{wrap[2]}
 				</div>
 				<Preview text={text} />
-			</div>
+			</section>
 		</>
 	);
 }
