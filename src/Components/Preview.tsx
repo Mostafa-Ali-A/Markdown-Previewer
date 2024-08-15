@@ -1,16 +1,14 @@
 import './Preview.css';
-import React from 'react';
 import { Marked } from 'marked';
 import { markedHighlight } from 'marked-highlight';
 //import hljs from 'highlight.js';
 import { gfmHeadingId } from 'marked-gfm-heading-id';
 import { mangle } from 'marked-mangle';
-import Prism from 'prismjs';
+import { highlight, languages } from 'prismjs';
 
-export default function Preview({ text }) {
+export default function Preview({ text }: { text: string }) {
 	const options = {
-		breaks: true,
-		gfm: true,
+		prefix: 'my-prefix-',
 	};
 
 	const marked = new Marked(
@@ -21,7 +19,7 @@ export default function Preview({ text }) {
 			highlight(code, lang) {
 				/*const language = hljs.getLanguage(lang) ? lang : 'plaintext';
 				return hljs.highlight(code, { language }).value;*/
-				return Prism.highlight(code, Prism.languages.javascript, 'javascript');
+				return highlight(code, languages.javascript, 'javascript');
 			},
 		}),
 	);

@@ -18,7 +18,7 @@ export default function Editor() {
 		setPreviewMaximized(!previewMaximized);
 	};
 
-	/*const handleMaximized = (e) => {
+	/*const handleMaximized = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
 		if (e.currentTarget.previousElementSibling.className === 'clearBtn') {
 			setEditorMaximized(!editorMaximized);
 		} else if (e.currentTarget.previousElementSibling.className === 'head') {
@@ -26,7 +26,7 @@ export default function Editor() {
 		}
 	};*/
 
-	const handleMaximized = (e) => {
+	const handleMaximized = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
 		if (e.currentTarget === document.getElementsByClassName('fa-maximize')[0]) {
 			setEditorMaximized(!editorMaximized);
 		} else if (e.currentTarget === document.getElementsByClassName('fa-maximize')[1]) {
@@ -70,7 +70,7 @@ export default function Editor() {
 	return (
 		<>
 			<section
-				className={wrap[0]}
+				className={wrap[0] as string}
 				id='editorWrap'>
 				<div className='toolbar'>
 					<FontAwesomeIcon icon={faFreeCodeCamp} />
@@ -92,7 +92,7 @@ export default function Editor() {
 				/>
 			</section>
 			<section
-				className={wrap[1]}
+				className={wrap[1] as string}
 				id='previewWrap'>
 				<div className='toolbar'>
 					<FontAwesomeIcon icon={faFreeCodeCamp} />
