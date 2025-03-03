@@ -58,5 +58,5 @@
  <li>You Can Write MarkDown Language Flavor into the Editor and the Text is Rendered as HTML in the Previewer as you Type</li>
  <li>You Can Clear the Editor by Clicking the Clear Button</li>
  <li>Can Expand Editor with all The Page and Hide the Previewer by Clicking the Arrow on the Right of the Editor</li>
- <li>Can Expand Previewer with all The Page and Hide the Editor by Clicking the Arrow on the Right of the Previewer</li>
+ <li>Can Expand Previewer with all the Page and Hide the Editor by Clicking the Arrow on the Right of the Previewer</li>
 </ol>
