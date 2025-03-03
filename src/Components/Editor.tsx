@@ -1,5 +1,5 @@
 import './Editor.css';
-import React, { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownLeftAndUpRightToCenter, faMaximize } from '@fortawesome/free-solid-svg-icons';
 import { faFreeCodeCamp } from '@fortawesome/free-brands-svg-icons';
@@ -39,6 +39,7 @@ export default function Editor() {
 				'editorWrap maximized',
 				'previewWrap hide',
 				<FontAwesomeIcon
+					key='editor-icon'
 					icon={faDownLeftAndUpRightToCenter}
 					onClick={handleEditorMaximized}
 				/>,
@@ -48,6 +49,7 @@ export default function Editor() {
 				'editorWrap hide',
 				'previewWrap maximized',
 				<FontAwesomeIcon
+					key='preview-icon'
 					icon={faDownLeftAndUpRightToCenter}
 					onClick={handlePreviewMaximized}
 				/>,
@@ -56,6 +58,7 @@ export default function Editor() {
 				'editorWrap',
 				'previewWrap',
 				<FontAwesomeIcon
+					key='maximize-icon'
 					icon={faMaximize}
 					onClick={handleMaximized}
 				/>,
@@ -63,8 +66,19 @@ export default function Editor() {
 
 	/* On Clicking Buttons Events */
 
+	const timer = useRef<ReturnType<typeof setTimeout>>();
+
 	const clearTextarea = () => {
+		if (text !== '') {
+			(document.getElementsByClassName('clearBtn')[0] as HTMLButtonElement).style.scale = '0.95';
+			timer.current = setTimeout(() => {
+				(document.getElementsByClassName('clearBtn')[0] as HTMLButtonElement).style.scale = '';
+			}, 150);
+		}
+
 		setText('');
+
+		return () => clearTimeout(timer.current);
 	};
 
 	return (
@@ -76,6 +90,7 @@ export default function Editor() {
 					<FontAwesomeIcon icon={faFreeCodeCamp} />
 					<h6 className='head'>Editor</h6>
 					<button
+						type='button'
 						title='Clear'
 						className='clearBtn'
 						onClick={clearTextarea}>

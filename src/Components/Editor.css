@@ -57,6 +57,7 @@ textarea {
 	border-width: 2px;
 	margin-right: 15px;
 	font-size: 15px;
+	transition: scale 150ms ease-in-out;
 }
 
 .clearBtn:hover {

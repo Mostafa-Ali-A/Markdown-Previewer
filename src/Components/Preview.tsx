@@ -16,7 +16,7 @@ export default function Preview({ text }: { text: string }) {
 		mangle(),
 		markedHighlight({
 			langPrefix: 'prismjs language-',
-			highlight(code, lang) {
+			highlight(code, _lang) {
 				/*const language = hljs.getLanguage(lang) ? lang : 'plaintext';
 				return hljs.highlight(code, { language }).value;*/
 				return highlight(code, languages.javascript, 'javascript');
@@ -29,6 +29,7 @@ export default function Preview({ text }: { text: string }) {
 			id='preview'
 			dangerouslySetInnerHTML={{
 				__html: marked.parse(text),
-			}}></article>
+			}}
+		/>
 	);
 }
