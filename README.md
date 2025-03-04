@@ -1,13 +1,13 @@
 <h2 align='center'>PageSpeed Insights Review</h2>
-<img alt='Markdown Previewer' src='https://github.com/Mostafa-Ali-A/Markdown-Previewer/assets/72570901/8627c7a5-1408-46e2-a313-727c2e069abe'></img>
+<img alt='Markdown Previewer' src='https://github.com/dev-mostafa-ali/markdown-previewer/assets/72570901/8627c7a5-1408-46e2-a313-727c2e069abe'></img>
 <h2>
-  <p align='center'>PageSpeed Insights
-<a href='https://pagespeed.web.dev/'>Live Link!</a>
+  <p align='center'>PageSpeed Insights 
+<a href='https://pagespeed.web.dev/'>Link!</a>
     </p>
 </h2>
 <h2>
   <p align='center'>Markdown Previewer 
-<a href='https://mostafa-ali-a.github.io/Markdown-Previewer/'>Live URL!</a>
+<a href='https://dev-mostafa-ali.github.io/markdown-previewer/'>Live URL!</a>
     </p>
 </h2>
 <h1>
@@ -29,6 +29,9 @@
   <ul>
     <li>
   <h3>React.js</h3>
+   </li>
+    <li>
+  <h3>Typescript</h3>
    </li>
    <li>
   <h3>JavaScript</h3>
