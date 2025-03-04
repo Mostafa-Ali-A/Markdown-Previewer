@@ -34,7 +34,7 @@
   <h3>Typescript</h3>
    </li>
    <li>
-  <h3>JavaScript</h3>
+  <h3>Javascript</h3>
    </li>
    <li>
   <h3>Bootstrap</h3>
